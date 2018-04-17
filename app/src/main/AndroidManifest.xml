@@ -26,7 +26,15 @@
         </activity>
         <activity android:name=".chapter2.DrawLineActivity">
         </activity>
-        <activity android:name=".chapter2.RrawRectActivity">
+        <activity android:name=".chapter2.DrawRectActivity">
+        </activity>
+        <activity android:name=".chapter2.DrawCircleActivity">
+        </activity>
+        <activity android:name=".chapter2.DrawPathActivity">
+        </activity>
+        <activity android:name=".chapter2.DrawPath2Activity">
+        </activity>
+        <activity android:name=".chapter2.DrawBaserActivity">
         </activity>
     </application>
 

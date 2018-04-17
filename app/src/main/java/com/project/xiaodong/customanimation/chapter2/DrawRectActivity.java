@@ -39,7 +39,7 @@ import butterknife.InjectView;
 * 该方法是上面方法的另一种重载形式
 *
 * */
-public class RrawRectActivity extends AppCompatActivity {
+public class DrawRectActivity extends AppCompatActivity {
 
     @InjectView(R.id.iv)
     ImageView mIv;

@@ -38,6 +38,10 @@ public class Chapter2Activity extends AppCompatActivity {
         mList.add(getBeanWraperData("绘制点"));
         mList.add(getBeanWraperData("绘制线"));
         mList.add(getBeanWraperData("绘制矩形"));
+        mList.add(getBeanWraperData("绘制圆"));
+        mList.add(getBeanWraperData("绘制路径"));
+        mList.add(getBeanWraperData("绘制路径2"));
+        mList.add(getBeanWraperData("贝赛尔曲线"));
 
         recycleview.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new CustomAnimalListAdapter(this, mList);
@@ -67,7 +71,19 @@ public class Chapter2Activity extends AppCompatActivity {
                 intent = new Intent(this, DrawLineActivity.class);
                 break;
             case "绘制矩形":
-                intent = new Intent(this, RrawRectActivity.class);
+                intent = new Intent(this, DrawRectActivity.class);
+                break;
+            case "绘制圆":
+                intent = new Intent(this, DrawCircleActivity.class);
+                break;
+            case "绘制路径":
+                intent = new Intent(this, DrawPathActivity.class);
+                break;
+            case "绘制路径2":
+                intent = new Intent(this, DrawPath2Activity.class);
+                break;
+            case "贝赛尔曲线":
+                intent = new Intent(this, DrawBaserActivity.class);
                 break;
         }
         if (intent == null) {
