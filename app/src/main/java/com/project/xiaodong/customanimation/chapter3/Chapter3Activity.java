@@ -1,4 +1,4 @@
-package com.project.xiaodong.customanimation.chapter2;
+package com.project.xiaodong.customanimation.chapter3;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,8 +14,7 @@ import com.project.xiaodong.customanimation.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Chapter2Activity extends AppCompatActivity {
-
+public class Chapter3Activity extends AppCompatActivity {
     RecyclerView recycleview;
 
     private CustomAnimalListAdapter mAdapter;
@@ -24,25 +23,22 @@ public class Chapter2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chapter2);
+        setContentView(R.layout.activity_chapter3);
         recycleview = findViewById(R.id.recycleview);
 
         initData();
-
     }
 
     private void initData() {
 
-        mList.add(getBeanWraperData("Paint"));
-        mList.add(getBeanWraperData("位图"));
-        mList.add(getBeanWraperData("绘制点"));
-        mList.add(getBeanWraperData("绘制线"));
-        mList.add(getBeanWraperData("绘制矩形"));
-        mList.add(getBeanWraperData("绘制圆"));
-        mList.add(getBeanWraperData("绘制路径"));
-        mList.add(getBeanWraperData("绘制路径2"));
-        mList.add(getBeanWraperData("贝赛尔曲线"));
-        mList.add(getBeanWraperData("绘制文字"));
+        mList.add(getBeanWraperData("BallMoveView"));
+        mList.add(getBeanWraperData("坐标转换"));
+        mList.add(getBeanWraperData("剪切"));
+        mList.add(getBeanWraperData("爆炸View"));
+        mList.add(getBeanWraperData("手表"));
+        mList.add(getBeanWraperData("双缓存"));
+        mList.add(getBeanWraperData("双缓存-矩形"));
+
 
         recycleview.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new CustomAnimalListAdapter(this, mList);
@@ -59,36 +55,28 @@ public class Chapter2Activity extends AppCompatActivity {
     private void JumpToActivity(String name) {
         Intent intent = null;
         switch (name) {
-            case "Paint":
-                intent = new Intent(this, PaintActivity.class);
+            case "BallMoveView":
+                intent = new Intent(this, BallMoveViewActivity.class);
                 break;
-            case "位图":
-                intent = new Intent(this, DrawBitmapActivity.class);
+            case "坐标转换":
+                intent = new Intent(this, TranslateXYActivity.class);
                 break;
-            case "绘制点":
-                intent = new Intent(this, DrawPointActivity.class);
+            case "剪切":
+                intent = new Intent(this, ClipActivity.class);
                 break;
-            case "绘制线":
-                intent = new Intent(this, DrawLineActivity.class);
+            case "爆炸View":
+                intent = new Intent(this, BombActivity.class);
                 break;
-            case "绘制矩形":
+            case "手表":
+                intent = new Intent(this, WatchViewActivity.class);
+                break;
+            case "双缓存":
+                intent = new Intent(this, ShowlineActivity.class);
+                break;
+            case "双缓存-矩形":
                 intent = new Intent(this, DrawRectActivity.class);
                 break;
-            case "绘制圆":
-                intent = new Intent(this, DrawCircleActivity.class);
-                break;
-            case "绘制路径":
-                intent = new Intent(this, DrawPathActivity.class);
-                break;
-            case "绘制路径2":
-                intent = new Intent(this, DrawPath2Activity.class);
-                break;
-            case "贝赛尔曲线":
-                intent = new Intent(this, DrawBaserActivity.class);
-                break;
-            case "绘制文字":
-                intent = new Intent(this, DrawTextActivity.class);
-                break;
+
         }
         if (intent == null) {
             return;

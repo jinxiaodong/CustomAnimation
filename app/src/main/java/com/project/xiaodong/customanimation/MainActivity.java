@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.project.xiaodong.customanimation.chapter2.Chapter2Activity;
+import com.project.xiaodong.customanimation.chapter3.Chapter3Activity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private void initData() {
 
         mList.add(getBeanWraperData("chapter2"));
+        mList.add(getBeanWraperData("chapter3"));
 
         mRecycleview.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new CustomAnimalListAdapter(this, mList);
@@ -53,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
         switch (name) {
             case "chapter2":
                 intent = new Intent(this, Chapter2Activity.class);
+                break;
+            case "chapter3":
+                intent = new Intent(this, Chapter3Activity.class);
                 break;
         }
         if (intent == null) {

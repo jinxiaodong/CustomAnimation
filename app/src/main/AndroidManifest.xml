@@ -36,6 +36,24 @@
         </activity>
         <activity android:name=".chapter2.DrawBaserActivity">
         </activity>
+        <activity android:name=".chapter2.DrawTextActivity">
+        </activity>
+        <activity android:name=".chapter3.Chapter3Activity">
+        </activity>
+        <activity android:name=".chapter3.BallMoveViewActivity">
+        </activity>
+        <activity android:name=".chapter3.TranslateXYActivity">
+        </activity>
+        <activity android:name=".chapter3.ClipActivity">
+        </activity>
+        <activity android:name=".chapter3.BombActivity">
+        </activity>
+        <activity android:name=".chapter3.WatchViewActivity">
+        </activity>
+        <activity android:name=".chapter3.ShowlineActivity">
+        </activity>
+        <activity android:name=".chapter3.DrawRectActivity">
+        </activity>
     </application>
 
 </manifest>

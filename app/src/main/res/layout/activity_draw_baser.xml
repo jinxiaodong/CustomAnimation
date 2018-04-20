@@ -5,7 +5,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    tools:context="com.project.xiaodong.customanimation.chapter2.PaintActivity">
+    tools:context="com.project.xiaodong.customanimation.chapter2.DrawBaserActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:onClick="showBaser"
+            android:text="贝塞尔曲线"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:onClick="showArtTo"
+            android:text="artTo使用"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:onClick="showOperatNO"
+            android:text="图形运算"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="showOperatYes"
+            android:text="图形运算2"/>
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/iv"
