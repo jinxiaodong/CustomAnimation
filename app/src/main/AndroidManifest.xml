@@ -54,6 +54,14 @@
         </activity>
         <activity android:name=".chapter3.DrawRectActivity">
         </activity>
+        <activity android:name=".chapter4.Chapter4Activity">
+        </activity>
+        <activity android:name=".chapter4.ShadowActivity">
+        </activity>
+        <activity android:name=".chapter4.GradientActivity">
+        </activity>
+        <activity android:name=".chapter4.SweepViewActivity">
+        </activity>
     </application>
 
 </manifest>

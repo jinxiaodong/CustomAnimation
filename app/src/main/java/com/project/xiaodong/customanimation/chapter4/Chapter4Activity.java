@@ -1,4 +1,4 @@
-package com.project.xiaodong.customanimation;
+package com.project.xiaodong.customanimation.chapter4;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,9 +7,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.project.xiaodong.customanimation.chapter2.Chapter2Activity;
-import com.project.xiaodong.customanimation.chapter3.Chapter3Activity;
-import com.project.xiaodong.customanimation.chapter4.Chapter4Activity;
+import com.project.xiaodong.customanimation.BeanWraper;
+import com.project.xiaodong.customanimation.CustomAnimalListAdapter;
+import com.project.xiaodong.customanimation.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +17,7 @@ import java.util.List;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class MainActivity extends AppCompatActivity {
-
+public class Chapter4Activity extends AppCompatActivity {
     @InjectView(R.id.recycleview)
     RecyclerView mRecycleview;
 
@@ -28,18 +27,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_chapter4);
         ButterKnife.inject(this);
 
         initData();
     }
 
+
     private void initData() {
-
-        mList.add(getBeanWraperData("chapter2"));
-        mList.add(getBeanWraperData("chapter3"));
-        mList.add(getBeanWraperData("chapter4"));
-
+        mList.add(getBeanWraperData("阴影"));
+        mList.add(getBeanWraperData("渐变"));
+        mList.add(getBeanWraperData("旋转光盘"));
         mRecycleview.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new CustomAnimalListAdapter(this, mList);
         mRecycleview.setAdapter(mAdapter);
@@ -55,13 +53,14 @@ public class MainActivity extends AppCompatActivity {
     private void JumpToActivity(String name) {
         Intent intent = null;
         switch (name) {
-            case "chapter2":
-                intent = new Intent(this, Chapter2Activity.class);
+            case "阴影":
+                intent = new Intent(this, ShadowActivity.class);
                 break;
-            case "chapter3":
-                intent = new Intent(this, Chapter3Activity.class);
-                break;case "chapter4":
-                intent = new Intent(this, Chapter4Activity.class);
+            case "渐变":
+                intent = new Intent(this, GradientActivity.class);
+                break;
+            case "旋转光盘":
+                intent = new Intent(this, SweepViewActivity.class);
                 break;
         }
         if (intent == null) {
@@ -76,6 +75,4 @@ public class MainActivity extends AppCompatActivity {
         beanWraper.name = name;
         return beanWraper;
     }
-
-
 }

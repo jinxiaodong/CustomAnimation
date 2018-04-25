@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.xiaodong.customanimation.chapter4.ShadowActivity">
+
+    <com.project.xiaodong.customanimation.chapter4.view.ShaderView
+        android:id="@+id/shaderview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.project.xiaodong.customanimation.chapter3.view.BallMoveView
+        android:id="@+id/ballview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="next"
+        android:text="下一个"/>
+
+</RelativeLayout>
